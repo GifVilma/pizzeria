@@ -1,0 +1,281 @@
+/* ==========================================================================
+   Estilos CSS Limpios (Business Casual - La Buona Pizza Alausí)
+   ========================================================================== */
+
+body {
+  font-family: 'Lora', serif;
+  background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/bg.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  color: #212529;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+}
+
+p {
+  line-height: 1.75;
+}
+
+.text-faded {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Cabecera Principal */
+.site-heading {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: 'Raleway', sans-serif;
+}
+
+.site-heading .site-heading-upper {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #e6a756;
+}
+
+.site-heading .site-heading-lower {
+  font-size: 4.5rem;
+  font-weight: 100;
+  line-height: 4rem;
+  color: #ffffff;
+}
+
+/* Secciones y Contenedores */
+.page-section {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.section-heading {
+  text-transform: uppercase;
+}
+
+.section-heading .section-heading-upper {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  padding-bottom: .5rem;
+  color: #e6a756;
+}
+
+.section-heading .section-heading-lower {
+  display: block;
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+.section-heading .section-heading-under {
+  display: block;
+  font-size: 1rem;
+  text-transform: none;
+  font-weight: 300;
+  margin-top: .5rem;
+}
+
+/* Tarjetas y Bloques Blancos Traslúcidos */
+.bg-faded {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+/* Barra de Navegación (Líneas naranjas eliminadas) */
+#mainNav {
+  background-color: rgba(47, 23, 15, 0.9);
+  font-family: 'Raleway', sans-serif;
+  border: none !important; /* Asegura eliminar cualquier borde previo */
+}
+
+#mainNav .navbar-brand {
+  color: #e6a756;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+#mainNav .navbar-nav .nav-item.active .nav-link,
+#mainNav .navbar-nav .nav-item .nav-link:hover {
+  color: #e6a756;
+}
+
+@media (min-width: 992px) {
+  #mainNav .navbar-nav .nav-item .nav-link {
+    font-size: 0.9rem;
+  }
+}
+
+/* Botones y Elementos Destacados */
+.text-primary {
+  color: #e6a756 !important;
+}
+
+.bg-primary {
+  background-color: #e6a756 !important;
+}
+
+.btn-primary {
+  background-color: #e6a756;
+  border-color: #e6a756;
+  color: #ffffff;
+  box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #df902a;
+  border-color: #df902a;
+}
+
+.btn-xl {
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Secciones Destacadas (Call To Action / CTA) */
+.cta {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: rgba(230, 167, 86, 0.9);
+}
+
+.cta .cta-inner {
+  position: relative;
+  padding: 3rem;
+  margin: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 0.5rem;
+}
+
+.cta .cta-inner:before {
+  border-radius: 0.5rem;
+  content: '';
+  position: absolute;
+  top: -0.5rem;
+  bottom: -0.5rem;
+  left: -0.5rem;
+  right: -0.5rem;
+  border: 0.25rem solid rgba(255, 255, 255, 0.85);
+}
+
+/* Pie de Página (Línea naranja eliminada) */
+.footer {
+  background-color: rgba(47, 23, 15, 0.9);
+  border: none !important;
+}
+
+a.link {
+  color: #df902a;
+}
+
+a.link:hover {
+  text-decoration: none;
+  color: #e6a756 !important;
+}
+
+.section-content {
+  font-family: 'Lora', serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 28px !important;
+}
+
+/* Contenedor fijo */
+.whatsapp-floating-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Botón de llamar - texto más grande */
+.btn-whatsapp-inline {
+  font-size: 1.05rem;        /* ← tamaño de letra más grande */
+  font-weight: 600;
+  padding: 1rem 2rem;        /* un poco más de espacio para que se vea bien */
+  letter-spacing: 0.3px;
+}
+
+/* En móviles que no sea excesivo */
+@media (max-width: 768px) {
+  .btn-whatsapp-inline {
+    font-size: 1.05rem;
+    padding: 0.9rem 1.5rem;
+  }
+}
+/* Botón circular */
+.whatsapp-floating-btn {
+  background-color: #25D366;
+  color: white !important;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+}
+
+.whatsapp-floating-btn:hover {
+  transform: scale(1.12);
+  background-color: #20ba5a;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
+}
+
+/* Onda pulsante */
+.phone-pulse-wave {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: pulseWaveAnimation 2s infinite ease-out;
+  z-index: 1;
+  pointer-events: none; /* importante para que no interfiera con el click */
+}
+
+@keyframes pulseWaveAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+  .whatsapp-floating-container {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .whatsapp-floating-btn,
+  .phone-pulse-wave {
+    width: 54px;
+    height: 54px;
+  }
+}
