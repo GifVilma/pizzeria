@@ -131,7 +131,9 @@ export function renderStorePage() {
               </div>
 
               <!-- Botón Directo a WhatsApp -->
-              ${renderWhatsAppButton()}
+              <div class="text-center my-5">
+                ${renderWhatsAppButton()}
+              </div>
 
 
             </div>
