@@ -15,7 +15,7 @@ const initialReviews = [
     puntuacion: 5,
     comentario: "Excelente servicio a domicilio y la masa artesanal es de otro nivel. Súper recomendados los combos familiares.",
     creado: "22/09/2026",
-    detalle: "Cliente verificado • Consumo local"
+    detalle: "Cliente verificado • Pedido a domicilio"
   }
 ];
 
