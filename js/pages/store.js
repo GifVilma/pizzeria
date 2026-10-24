@@ -33,7 +33,7 @@ export function renderStorePage() {
                       </div>
                       <p class="mb-3">1 Pizza Mediana Margarita + Pizzolinos de Queso (6 ud.)</p>
                     </div>
-                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/combo-mar-piz.jpg" alt="Piza Margarita y Pizzolinos">
+                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/combo-mar-piz.jpg" alt="Pizza Margarita y pizzolinos de queso">
                   </div>
                 </div>
 
@@ -47,7 +47,7 @@ export function renderStorePage() {
                       </div>
                       <p class="mb-3">1 Pizza Mediana Hawaiana + Pan de Ajo (4 ud.)</p>
                     </div>
-                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/combo-haw-ajo.jpg" alt="pizza hawayana y pan de ajo">
+                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/combo-haw-ajo.jpg" alt="Pizza hawaiana con pan de ajo">
                   </div>
                 </div>
 
@@ -61,7 +61,7 @@ export function renderStorePage() {
                       </div>
                       <p class="mb-3">1 Pizza Mediana Barbacoa + Alitas BBQ jugosas</p>
                     </div>
-                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/combo-bar-ali.jpg" alt="Pizza Barbacoa">
+                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/combo-bar-ali.jpg" alt="Pizza barbacoa con alitas BBQ">
                   </div>
                 </div>
 
@@ -87,7 +87,7 @@ export function renderStorePage() {
                       1 Pizza Familiar a elección (Barbacoa, Hawaiana, Carbonara o Margarita) + Alitas BBQ + Pizzolinos de Queso (6 ud.) + Pan de Ajo (4 ud.)
                     </p>
                     <span class="h4 font-weight-bold text-danger d-block mb-3">$17.00</span>
-                    <img class="img-fluid rounded shadow-sm mx-auto d-block" style="max-height: 260px; object-fit: cover;" src="img/combo-familiar.jpg" alt="Combo La Buona" onerror="this.src='https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80'">
+                    <img class="img-fluid rounded shadow-sm mx-auto d-block" style="max-height: 260px; object-fit: cover;" src="img/combo-familiar.jpg" alt="Combo familiar La Buona con pizza, alitas BBQ, pizzolinos y pan de ajo">
                   </div>
                 </div>
 
@@ -101,7 +101,7 @@ export function renderStorePage() {
                     <h5 class="font-weight-bold mb-1">Pizzolinos de Queso</h5>
                     <p class="small text-muted mb-2">Porción de 6 unidades</p>
                     <span class="font-weight-bold text-primary">$2.00</span>
-                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/pizzolinos.jpg" alt="Pizzolinos">
+                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/pizzolinos.jpg" alt="Porción de pizzolinos de queso">
                   </div>
                 </div>
                 <div class="col-md-4 mb-3">
@@ -117,7 +117,7 @@ export function renderStorePage() {
                     <h5 class="font-weight-bold mb-1">Alitas BBQ</h5>
                     <p class="small text-muted mb-2">Bañadas en salsa especial</p>
                     <span class="font-weight-bold text-primary">$5.00</span>
-                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/alitas.png" alt="Alitas">
+                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/alitas.png" alt="Porción de alitas BBQ">
                   </div>
                 </div>
               </div>
@@ -125,7 +125,7 @@ export function renderStorePage() {
               <!-- Detalles de Envío y Pago -->
               <div class="bg-faded p-4 rounded text-left mb-5">
                 <h4 class="font-weight-bold text-primary mb-3">🛵 Atención Directa & Delivery</h4>
-                <p class="mb-2"><strong>Entregas a domicilio en todo Alausí</strong> y servicio de comida para llevar.</p>
+                <p class="mb-2"><strong>Entregas a domicilio en todo Alausí.</strong></p>
                 <p class="mb-2"><i class="fa fa-clock-o text-primary mr-2"></i><strong>Horarios:</strong> Martes a Viernes de 17:00 a 23:00 | Sábados y Domingos de 16:00 a 23:30 (Lunes cerrado).</p>
                 <p class="mb-0"><i class="fa fa-credit-card text-primary mr-2"></i><strong>Métodos de Pago:</strong> Efectivo y transferencias bancarias directas.</p>
               </div>

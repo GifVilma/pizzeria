@@ -37,7 +37,7 @@ export function renderBlogPage() {
               <span class="section-heading-lower" style="font-size: 2rem; line-height: 2.2rem;">${post.tituloLower}</span>
             </h2>
             <p class="mb-4">${post.resumen}</p>
-            <a href="#contact" class="btn btn-primary btn-sm">Leer Más / Comentar</a>
+            <a href="https://wa.me/593980491815?text=${encodeURIComponent(`Hola, quisiera más información sobre: ${post.tituloLower}`)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Consultar por WhatsApp</a>
           </div>
         </div>
       </div>
