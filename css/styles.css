@@ -92,6 +92,13 @@ p {
   margin-top: .5rem;
 }
 
+@media (max-width: 575.98px) {
+  .section-heading .section-heading-lower {
+    font-size: 2rem;
+    overflow-wrap: anywhere;
+  }
+}
+
 /* Tarjetas y Bloques Blancos Traslúcidos */
 .bg-faded {
   background-color: rgba(255, 255, 255, 0.85);
