@@ -8,7 +8,6 @@ export function renderHomePage() {
       <div class="container">
         <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/bpizza.jpeg" alt="Pizza artesanal de La Buona Pizza Alausí">
         <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-          <span class="home-watermark" aria-hidden="true"></span>
           <h1 class="section-heading mb-4">
             <span class="section-heading-upper">Pizzas Artesanales</span>
             <span class="section-heading-lower">A domicilio en Alausí</span>

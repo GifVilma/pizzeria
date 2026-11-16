@@ -3,6 +3,11 @@
    ========================================================================== */
 
 body {
+  --logo-fondo-ancho: 22vw;
+  --logo-fondo-opacidad: 0.25;
+  --logo-fondo-izquierda: 32px;
+  --logo-fondo-abajo: 104px;
+  isolation: isolate;
   font-family: 'Lora', serif;
   background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/bg.jpg");
   background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), image-set(url("../img/optimized/bg-1520.webp") type("image/webp"), url("../img/bg.jpg") type("image/jpeg"));
@@ -10,6 +15,24 @@ body {
   background-position: center;
   background-size: cover;
   color: #212529;
+}
+
+/* Logotipo del fondo, sobre la fotografía y por debajo del contenido. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("../img/logo-la-buona-fondo-transparente.png") left var(--logo-fondo-izquierda) bottom var(--logo-fondo-abajo) / var(--logo-fondo-ancho) auto no-repeat;
+  opacity: var(--logo-fondo-opacidad);
+}
+
+@media (max-width: 575.98px) {
+  body {
+    --logo-fondo-izquierda: 16px;
+    --logo-fondo-abajo: 96px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -107,42 +130,15 @@ p {
   border-radius: 0.5rem;
 }
 
-/* Marca de agua decorativa: propuesta C, exclusivamente en la portada. */
+/* Apilado del contenido de presentación de portada. */
 body[data-page="home"] .intro-text {
   position: relative;
   isolation: isolate;
 }
 
-body[data-page="home"] .intro-text > :not(.home-watermark) {
+body[data-page="home"] .intro-text > * {
   position: relative;
   z-index: 1;
-}
-
-body[data-page="home"] .home-watermark {
-  position: absolute;
-  pointer-events: none;
-  user-select: none;
-  z-index: 0;
-  width: 132px;
-  max-width: 18%;
-  aspect-ratio: 1224 / 1158;
-  left: 26px;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0.08;
-  background: url("/img/logo-la-buona-marca-agua.svg") center / contain no-repeat;
-}
-
-@media (max-width: 575.98px) {
-  body[data-page="home"] .home-watermark {
-    width: 100px;
-    max-width: 35%;
-    left: 12px;
-    top: auto;
-    bottom: 12px;
-    transform: none;
-    opacity: 0.065;
-  }
 }
 
 /* Barra de Navegación (Líneas naranjas eliminadas) */
