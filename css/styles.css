@@ -5,6 +5,7 @@
 body {
   font-family: 'Lora', serif;
   background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/bg.jpg");
+  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), image-set(url("../img/optimized/bg-1520.webp") type("image/webp"), url("../img/bg.jpg") type("image/jpeg"));
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -81,7 +82,7 @@ p {
 .section-heading .section-heading-lower {
   display: block;
   font-size: 3rem;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 .section-heading .section-heading-under {
@@ -104,6 +105,44 @@ p {
   background-color: rgba(255, 255, 255, 0.85);
   color: #212529;
   border-radius: 0.5rem;
+}
+
+/* Marca de agua decorativa: propuesta C, exclusivamente en la portada. */
+body[data-page="home"] .intro-text {
+  position: relative;
+  isolation: isolate;
+}
+
+body[data-page="home"] .intro-text > :not(.home-watermark) {
+  position: relative;
+  z-index: 1;
+}
+
+body[data-page="home"] .home-watermark {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  width: 132px;
+  max-width: 18%;
+  aspect-ratio: 1224 / 1158;
+  left: 26px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.08;
+  background: url("/img/logo-la-buona-marca-agua.svg") center / contain no-repeat;
+}
+
+@media (max-width: 575.98px) {
+  body[data-page="home"] .home-watermark {
+    width: 100px;
+    max-width: 35%;
+    left: 12px;
+    top: auto;
+    bottom: 12px;
+    transform: none;
+    opacity: 0.065;
+  }
 }
 
 /* Barra de Navegación (Líneas naranjas eliminadas) */
@@ -143,18 +182,37 @@ p {
   background-color: #e6a756 !important;
 }
 
+/* Texto sobre superficies claras; los iconos decorativos conservan el naranja. */
+.bg-faded .text-primary:not(i):not(svg),
+.cta-inner .text-primary:not(i):not(svg),
+.bg-faded .section-heading-upper,
+.cta-inner .section-heading-upper {
+  color: #2f170f !important;
+}
+
 .btn-primary {
   background-color: #e6a756;
   border-color: #e6a756;
-  color: #ffffff;
+  color: #2f170f;
   box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);
 }
 
 .btn-primary:hover,
 .btn-primary:focus,
-.btn-primary:active {
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active {
   background-color: #df902a;
   border-color: #df902a;
+  color: #2f170f;
+}
+
+.btn-primary:disabled,
+.btn-primary.disabled {
+  background-color: #e6a756;
+  border-color: #e6a756;
+  color: #2f170f;
 }
 
 .btn-xl {
@@ -182,6 +240,7 @@ p {
 }
 
 .cta .cta-inner:before {
+  pointer-events: none;
   border-radius: 0.5rem;
   content: '';
   position: absolute;
@@ -192,10 +251,26 @@ p {
   border: 0.25rem solid rgba(255, 255, 255, 0.85);
 }
 
+/* El marco de los artículos es decorativo: no debe bloquear enlaces ni selección. */
+.cta .blog-article::before {
+  pointer-events: none;
+}
+
 /* Pie de Página (Línea naranja eliminada) */
 .footer {
   background-color: rgba(47, 23, 15, 0.9);
   border: none !important;
+}
+
+.footer .small {
+  color: #fff;
+}
+
+@media (max-width: 575.98px) {
+  .footer .small {
+    /* Reserva el ancho de los flotantes sin añadir un gran hueco inferior. */
+    padding-inline: 70px;
+  }
 }
 
 a.link {
@@ -212,6 +287,23 @@ a.link:hover {
   font-size: 16px !important;
   font-weight: 400 !important;
   line-height: 28px !important;
+}
+
+#resenas-container {
+  min-width: 0;
+}
+
+#resenas-container .section-content,
+#resenas-container h3 {
+  overflow-wrap: anywhere;
+}
+
+#resenas-container h3 {
+  min-width: 0;
+}
+
+#resenas-container [role="img"] {
+  flex-shrink: 0;
 }
 
 /* Contenedor fijo */
@@ -287,6 +379,18 @@ a.link:hover {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .phone-pulse-wave {
+    animation: none;
+  }
+  .whatsapp-floating-btn {
+    transition: none;
+  }
+  .whatsapp-floating-btn:hover {
+    transform: none;
+  }
+}
+
 /* Móvil */
 @media (max-width: 768px) {
   .whatsapp-floating-container {
@@ -296,6 +400,51 @@ a.link:hover {
   
   .whatsapp-floating-btn,
   .phone-pulse-wave {
+    width: 54px;
+    height: 54px;
+  }
+}
+
+/* Picture no crea una caja nueva: se conserva la distribución del img original. */
+.optimized-picture {
+  display: contents;
+}
+
+/* Control independiente: no altera WhatsApp ni los botones naranjas. */
+.back-to-top {
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: #2f170f;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.back-to-top[hidden] {
+  display: none;
+}
+
+.back-to-top:focus-visible {
+  outline: 3px solid #e6a756;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px #fff, 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    left: 20px;
+    bottom: 20px;
     width: 54px;
     height: 54px;
   }

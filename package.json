@@ -1,0 +1,25 @@
+{
+  "name": "la-buona-pizza-alausi",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "generate:preview": "node scripts/generar-paginas.mjs --preview",
+    "test:resenas": "node tests/resenas.test.mjs",
+    "test:generador": "node tests/generador.test.mjs",
+    "test": "npm run test:resenas && npm run test:generador && npm run test:navegacion && npm run test:seo && npm run test:blog && npm run test:carta && npm run test:imagenes && npm run test:seo-tecnico && npm run test:interaccion && npm run test:volver-arriba && npm run test:marca-agua",
+    "generate": "node scripts/generar-paginas.mjs --site",
+    "test:navegacion": "node tests/navegacion.test.mjs",
+    "test:seo": "node tests/seo.test.mjs",
+    "test:blog": "node tests/blog.test.mjs",
+    "test:carta": "node tests/carta.test.mjs",
+    "images:optimize": "python3 scripts/optimizar-imagenes.py",
+    "test:imagenes": "node tests/imagenes.test.mjs",
+    "test:seo-tecnico": "node tests/seo-tecnico.test.mjs",
+    "test:interaccion": "node tests/interaccion.test.mjs",
+    "test:volver-arriba": "node tests/volver-arriba.test.mjs",
+    "test:marca-agua": "node tests/marca-agua.test.mjs"
+  }
+}

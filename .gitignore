@@ -1,0 +1,52 @@
+# Auditorías, capturas y vistas de prueba locales.
+/.tmp/
+
+# Configuración del editor y metadatos del sistema.
+/.vscode/
+/.idea/
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# Dependencias y entornos locales; conservar package.json y los archivos lock.
+node_modules/
+__pycache__/
+*.py[cod]
+/.venv/
+/venv/
+
+# Archivos temporales, registros y copias de seguridad.
+*.log
+*.swp
+*.swo
+*~
+*.bak
+*.backup
+*.orig
+*.rej
+
+# Entornos y credenciales privadas, también en subcarpetas.
+.env
+.env.*
+.aws/
+.ssh/
+.secrets/
+credentials.json
+credentials.*.json
+secrets.json
+secrets.*.json
+service-account*.json
+*-service-account.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+id_rsa
+id_ed25519
+/supabase/.temp/
+
+# js/config/supabase.js contiene solo configuración pública y debe versionarse.
+# No excluir HTML generado, imágenes, manifest.json, CNAME, plantillas ni pruebas.

@@ -8,10 +8,11 @@ export function renderHomePage() {
       <div class="container">
         <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/bpizza.jpeg" alt="Pizza artesanal de La Buona Pizza Alausí">
         <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-          <h2 class="section-heading mb-4">
+          <span class="home-watermark" aria-hidden="true"></span>
+          <h1 class="section-heading mb-4">
             <span class="section-heading-upper">Pizzas Artesanales</span>
-            <span class="section-heading-lower">La Buona Pizza</span>
-          </h2>
+            <span class="section-heading-lower">A domicilio en Alausí</span>
+          </h1>
           <p class="mb-3">Elaboramos pizzas artesanales con la masa perfecta, salsa italiana casera e ingredientes 100% frescos en Alausí.</p>
           <div class="intro-button mx-auto">
             <a class="btn btn-primary btn-xl" href="#pizzas">Ver Nuestras Pizzas</a>
@@ -30,7 +31,7 @@ export function renderHomePage() {
                 <span class="section-heading-upper">Compromiso de Calidad</span>
                 <span class="section-heading-lower">Para Ti</span>
               </h2>
-              <p class="mb-0">Cuando visitas nuestra web o pides a domicilio, estamos dedicados a brindarte un servicio amable, un ambiente acogedor y las mejores pizzas elaboradas con ingredientes locales de la más alta calidad.</p>
+              <p class="mb-0">Ofrecemos exclusivamente entrega a domicilio en Alausí. Preparamos nuestras pizzas artesanales y atendemos tus consultas y pedidos por teléfono o WhatsApp.</p>
             </div>
           </div>
         </div>

@@ -1,61 +1,69 @@
-// js/app.js
+// Las páginas ya contienen su HTML. JavaScript solo mejora la interacción.
+import { initBackToTop } from './ui/volver-arriba.js';
+const labelledMenus = new WeakSet();
 
-import { renderHomePage } from './pages/home.js';
-import { renderPizzasPage } from './pages/pizzas.js';
-import { renderStorePage } from './pages/store.js';
-import { renderBlogPage } from './pages/blog.js';
-import { renderResenasPage, attachResenasEvents } from './pages/resenas.js';
+export function initMenuLabel() {
+  const button = document.getElementById('menu-toggle');
+  if (button?.tagName !== 'BUTTON' || labelledMenus.has(button)) return;
+  const update = () => button.setAttribute('aria-label',
+    button.getAttribute('aria-expanded') === 'true' ? 'Cerrar menú' : 'Abrir menú');
+  const observer = new MutationObserver(update);
+  observer.observe(button, { attributes: true, attributeFilter: ['aria-expanded'] });
+  labelledMenus.add(button);
+  update();
+}
 
-const routes = {
-  home:    { render: renderHomePage },
-  pizzas:  { render: renderPizzasPage },
-  store:   { render: renderStorePage },
-  blog:    { render: renderBlogPage },
-  resenas: { render: renderResenasPage, attachEvents: attachResenasEvents }
-};
+export function getLegacyDestination(pathname, hash) {
+  if (!['/', '/index.html'].includes(pathname)) return null;
+  const routes = { home: '/', pizzas: '/pizzas/', store: '/combos/', resenas: '/resenas/', blog: '/blog/' };
+  return routes[hash.replace(/^#/, '').trim()] || null;
+}
 
-function router() {
-  let hash = window.location.hash.replace('#', '').trim();
+export function initPage({ loadReviews = () => import('./pages/resenas.js') } = {}) {
+  const redirect = getLegacyDestination(window.location.pathname, window.location.hash);
+  if (redirect) { window.location.replace(redirect); return; }
+  initBackToTop();
+  initMenuLabel();
 
-  // Si el hash no existe o es inválido, redirige limpiamente a home
-  if (!routes[hash]) {
-    hash = 'home';
-    if (window.location.hash !== '#home') {
-      window.location.hash = 'home';
-    }
-  }
-
-  const route = routes[hash];
-
-  // 1. Marca la pestaña activa en el navbar estático
-  document.querySelectorAll('#navbar-links .nav-item').forEach(li => {
-    const link = li.querySelector('a');
-    const target = link?.getAttribute('href')?.replace('#', '');
-    li.classList.toggle('active', target === hash);
+  document.querySelectorAll('#navbar-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.jQuery) window.jQuery('#navbarResponsive').collapse('hide');
+    });
   });
 
-  // 2. Inyecta el contenido de la página seleccionada
-  const appContent = document.getElementById('app-content');
-  if (appContent) {
-    appContent.innerHTML = route.render();
-  }
-
-  // 3. Carga eventos si la vista los requiere (ej: Reseñas)
-  if (route.attachEvents) {
-    route.attachEvents();
-  }
-
-  // 4. Cierra el menú desplegable en pantallas móviles tras hacer clic
-  if (window.jQuery && $('#navbarResponsive').length) {
-    $('#navbarResponsive').collapse('hide');
-  }
-
-  window.scrollTo(0, 0);
+  if (document.body.dataset.page !== 'resenas') return;
+  let cleanup;
+  let active = true;
+  const attach = async () => {
+    try {
+      const { attachResenasEvents } = await loadReviews();
+      if (active) cleanup = attachResenasEvents();
+    } catch {
+      if (!active) return;
+      const container = document.getElementById('resenas-container');
+      if (container) {
+        container.textContent = 'No se pudieron cargar las reseñas. Recarga la página para reintentar.';
+        container.setAttribute('aria-busy', 'false');
+      }
+    }
+  };
+  void attach();
+  window.addEventListener('pagehide', () => {
+    active = false;
+    cleanup?.();
+    cleanup = undefined;
+    const form = document.getElementById('resenas-form');
+    if (form) delete form.dataset.bound;
+  });
+  window.addEventListener('pageshow', event => {
+    if (event.persisted) { active = true; void attach(); }
+  });
 }
 
-function init() {
-  window.addEventListener('hashchange', router);
-  router();
+if (typeof document !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', () => initPage());
+  window.addEventListener('hashchange', () => {
+    const target = getLegacyDestination(window.location.pathname, window.location.hash);
+    if (target) window.location.replace(target);
+  });
 }
-
-document.addEventListener('DOMContentLoaded', init);

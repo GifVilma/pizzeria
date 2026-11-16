@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.labuonapizzaalausi.online/</loc>
-  </url>
+  <url><loc>https://www.labuonapizzaalausi.online/</loc></url>
+  <url><loc>https://www.labuonapizzaalausi.online/pizzas/</loc></url>
+  <url><loc>https://www.labuonapizzaalausi.online/combos/</loc></url>
+  <url><loc>https://www.labuonapizzaalausi.online/resenas/</loc></url>
+  <url><loc>https://www.labuonapizzaalausi.online/blog/</loc></url>
+  <url><loc>https://www.labuonapizzaalausi.online/blog/pizza-a-domicilio-alausi/</loc></url>
+  <url><loc>https://www.labuonapizzaalausi.online/blog/masa-artesanal/</loc></url>
 </urlset>

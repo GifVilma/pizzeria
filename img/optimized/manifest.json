@@ -1,0 +1,581 @@
+{
+  "/img/alitas.png": {
+    "source": "/img/alitas.png",
+    "width": 730,
+    "height": 730,
+    "format": "PNG",
+    "bytes": 608597,
+    "sha256": "ede387e6d39d3e8793354051fcb6a376ab7f458cc18e5d1ad33265f50da83f91",
+    "uses": [
+      "js/pages/store.js"
+    ],
+    "variants": [
+      {
+        "path": "/img/optimized/alitas-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 31076,
+        "quality": 90,
+        "lossless": false,
+        "sha256": "338092013074c084fbb1847e18eb967e2655f3b2c5326c7ebf651e561f210689",
+        "psnr": 40.88
+      },
+      {
+        "path": "/img/optimized/alitas-730.webp",
+        "width": 730,
+        "height": 730,
+        "bytes": 49738,
+        "quality": 90,
+        "lossless": false,
+        "sha256": "50ef0c4ddfe4267a570137b7412f01d0f942e63e85ff9fe3ee66e3857266727b",
+        "psnr": 42.65
+      }
+    ]
+  },
+  "/img/bg.jpg": {
+    "source": "/img/bg.jpg",
+    "width": 1520,
+    "height": 1080,
+    "format": "JPEG",
+    "bytes": 144064,
+    "sha256": "6c34f4894a53c0d50479ff64edfc28b0a7b1573c50ca35546843a56db7143def",
+    "uses": [
+      "css/styles.css"
+    ],
+    "variants": [
+      {
+        "path": "/img/optimized/bg-1520.webp",
+        "width": 1520,
+        "height": 1080,
+        "bytes": 128824,
+        "quality": 84,
+        "lossless": false,
+        "sha256": "4e91039f8092b67c43387b22bb969a8724bb47a4264d7dd6c8ad9c4a5f8b51d6",
+        "psnr": 40.46
+      }
+    ]
+  },
+  "/img/bpizza.jpeg": {
+    "source": "/img/bpizza.jpeg",
+    "width": 800,
+    "height": 533,
+    "format": "JPEG",
+    "bytes": 129136,
+    "sha256": "ce7186f75a524f0fa6b099d7e1888ef56bb3a437fa11c3b827c0be8d5dac8aa3",
+    "uses": [
+      "js/pages/blog-articulos.js",
+      "js/pages/home.js"
+    ],
+    "variants": [
+      {
+        "path": "/img/optimized/bpizza-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 62044,
+        "quality": 90,
+        "lossless": false,
+        "sha256": "cd1e82dde418d17f7e2f3e1a908c21b119e82e2e235c8e9c4d405257c1558cec",
+        "psnr": 34.7
+      },
+      {
+        "path": "/img/optimized/bpizza-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 113252,
+        "quality": 86,
+        "lossless": false,
+        "sha256": "1cef6bdc94aac31681ee72bbcb06033b98af0bedb3d24fd9641ba9a9754cc082",
+        "psnr": 36.84
+      }
+    ]
+  },
+  "/img/combo-bar-ali.jpg": {
+    "source": "/img/combo-bar-ali.jpg",
+    "width": 736,
+    "height": 736,
+    "format": "JPEG",
+    "bytes": 86408,
+    "sha256": "98459ae96104e7821af57e051ddbf55203c6eed3b60b586c120f7e142fd1c720",
+    "uses": [
+      "js/pages/store.js"
+    ],
+    "variants": [
+      {
+        "path": "/img/optimized/combo-bar-ali-736.webp",
+        "width": 736,
+        "height": 736,
+        "bytes": 74912,
+        "quality": 80,
+        "lossless": false,
+        "sha256": "c9a6e2025cf5bbe074b7e42c6c9af7acafdf5ad9a3cb76da1cde4ef3c14c19b7",
+        "psnr": 37.66
+      }
+    ]
+  },
+  "/img/combo-familiar.png": {
+    "source": "/img/combo-familiar.png",
+    "width": 1672,
+    "height": 941,
+    "format": "PNG",
+    "bytes": 2809644,
+    "sha256": "95eea967ef1a244e892ab7b6f66922e71c9a7ce89dc690b9c09d7d835e1d671d",
+    "uses": [
+      "js/pages/store.js"
+    ],
+    "variants": [
+      {
+        "path": "/img/optimized/combo-familiar-480.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 63716,
+        "quality": 90,
+        "lossless": false,
+        "sha256": "8718a66849c91f48de3a7ebcc54c20f8b3d6820fe81eb2c5a12ce350f7cc4cbf",
+        "psnr": 29.59
+      },
+      {
+        "path": "/img/optimized/combo-familiar-960.webp",
+        "width": 960,
+        "height": 540,
+        "bytes": 202130,
+        "quality": 90,
+        "lossless": false,
+        "sha256": "e7a7c07bb7bd9672c9e0ac7a51c8be3da81aab0f02a26d6f0fba2b4f35bd064d",
+        "psnr": 31.31
+      }
+    ]
+  },
+  "/img/favicon-logo.png": {
+    "source": "/img/favicon-logo.png",
+    "width": 512,
+    "height": 512,
+    "format": "PNG",
+    "bytes": 54199,
+    "sha256": "f9cf7d384af57c221e3d839b156eefed52fafffd528d2a3dd47414cb7a39d474",
+    "uses": [
+      "templates/base.html"
+    ],
+    "variants": [
+      {
+        "path": "/img/optimized/favicon-logo-64.webp",
+        "width": 64,
+        "height": 64,
+        "bytes": 1632,
+        "quality": 100,
+        "lossless": true,
+        "sha256": "8e4ff7750f8d2f7bece31e5d37c05a30e3948336e0b04d631dfc3d22ebc0c5c7",
+        "psnr": null
+      }
+    ]
+  },
+  "/img/fingers-plato-blanco-1200.webp": {
+    "source": "/img/fingers-plato-blanco-1200.webp",
+    "width": 1200,
+    "height": 900,
+    "format": "WEBP",
+    "bytes": 157156,
+    "sha256": "d47c73c35d9cf11d6207489ed1b04e63ec13e824538fa16cf6de9c919fa306ff",
+    "uses": [
+      "js/pages/store.js"
+    ],
+    "preoptimized": true,
+    "variants": [
+      {
+        "path": "/img/fingers-plato-blanco-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 32020,
+        "sha256": "a04c5ef51bfc6a937cca602e2fb915fc115273c7fe7710dd41ef68111c145680"
+      },
+      {
+        "path": "/img/fingers-plato-blanco-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 77980,
+        "sha256": "be96ca532fe460a58e4b3e5a5e8372915e5b8f84beb207615650803b5b8f07eb"
+      },
+      {
+        "path": "/img/fingers-plato-blanco-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 157156,
+        "sha256": "d47c73c35d9cf11d6207489ed1b04e63ec13e824538fa16cf6de9c919fa306ff"
+      }
+    ]
+  },
+  "/img/fingers.jpeg": {
+    "source": "/img/fingers.jpeg",
+    "width": 1600,
+    "height": 1200,
+    "format": "JPEG",
+    "bytes": 232769,
+    "sha256": "f9a982ea7d44c0b86c69bdd8e3c6b77eb94994ad01e3c6ee92480cd2542ffd12",
+    "uses": [],
+    "variants": [
+      {
+        "path": "/img/optimized/fingers-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 53606,
+        "quality": 90,
+        "lossless": false,
+        "sha256": "74e6214effc7bae61f6fe48582e8e2ebb9113b082eb167b81e274a30cbba27c6",
+        "psnr": 38.51
+      },
+      {
+        "path": "/img/optimized/fingers-960.webp",
+        "width": 960,
+        "height": 720,
+        "bytes": 166854,
+        "quality": 90,
+        "lossless": false,
+        "sha256": "a898444b9866461be15a680a050ca3ea78c797c79aac0fe3cc0259f3ead6a4dd",
+        "psnr": 40.36
+      }
+    ],
+    "retained": true
+  },
+  "/img/masa-madre.jpg": {
+    "source": "/img/masa-madre.jpg",
+    "width": 736,
+    "height": 736,
+    "format": "JPEG",
+    "bytes": 69275,
+    "sha256": "63021a58948fd0bf249747b4d963a1952eefad511185c92781c30f3806efd7ab",
+    "uses": [
+      "js/pages/blog-articulos.js"
+    ],
+    "variants": [
+      {
+        "path": "/img/optimized/masa-madre-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 51748,
+        "quality": 90,
+        "lossless": false,
+        "sha256": "35347928e25ba6da905266227e0d9e2a7afd46831d46b4e484e1ef1a212185ad",
+        "psnr": 40.42
+      },
+      {
+        "path": "/img/optimized/masa-madre-736.webp",
+        "width": 736,
+        "height": 736,
+        "bytes": 62316,
+        "quality": 82,
+        "lossless": false,
+        "sha256": "14d9590cd2b8662ffc33f61a2a8f9479ffcbf8877f83891f03102bdd09e2311a",
+        "psnr": 38.95
+      }
+    ]
+  },
+  "/img/papas-locas.jpeg": {
+    "source": "/img/papas-locas.jpeg",
+    "width": 1402,
+    "height": 1122,
+    "format": "JPEG",
+    "bytes": 287007,
+    "sha256": "3d93be34554e0a3ae81cec27201c90663940b1630cd821b638cb0692d5df722d",
+    "uses": [
+      "js/pages/store.js"
+    ],
+    "variants": [
+      {
+        "path": "/img/optimized/papas-locas-480.webp",
+        "width": 480,
+        "height": 384,
+        "bytes": 77218,
+        "quality": 90,
+        "lossless": false,
+        "sha256": "21afabcfcbccd184d507e0342311a721322fa989440a4a910703b1c63f9479ee",
+        "psnr": 33.93
+      },
+      {
+        "path": "/img/optimized/papas-locas-960.webp",
+        "width": 960,
+        "height": 768,
+        "bytes": 239050,
+        "quality": 90,
+        "lossless": false,
+        "sha256": "7d7302f4de2f82dbdb3690905e6336fb3cdb5e2da8757d7c488698567be8a513",
+        "psnr": 38.1
+      }
+    ]
+  },
+  "/img/papas_locas_fingers.png": {
+    "source": "/img/papas_locas_fingers.png",
+    "width": 1774,
+    "height": 887,
+    "format": "PNG",
+    "bytes": 2516779,
+    "sha256": "f3712f0c10ab4f04ae3a6127da307c71f27866a6c044abdaaad26fde95e47220",
+    "uses": [
+      "js/pages/store.js"
+    ],
+    "variants": [
+      {
+        "path": "/img/optimized/papas_locas_fingers-480.webp",
+        "width": 480,
+        "height": 240,
+        "bytes": 44382,
+        "quality": 90,
+        "lossless": false,
+        "sha256": "01c59c24287e49a05c30a0c59dcfbd6ff33a08077565f3bba3ef18dae91d56dc",
+        "psnr": 30.81
+      },
+      {
+        "path": "/img/optimized/papas_locas_fingers-960.webp",
+        "width": 960,
+        "height": 480,
+        "bytes": 145142,
+        "quality": 90,
+        "lossless": false,
+        "sha256": "52fb798a1250526f2771f3e4b44e874f34b2c5eb7ba211b8dd5a446e27145888",
+        "psnr": 33.01
+      }
+    ]
+  },
+  "/img/pizza-barbacoa.jpg": {
+    "source": "/img/pizza-barbacoa.jpg",
+    "width": 736,
+    "height": 736,
+    "format": "JPEG",
+    "bytes": 160242,
+    "sha256": "496dfc6ea3c7fa6007d80e0ea5d93ebc0aa09e1128fc1bcd6774d85e9e46b6e4",
+    "uses": [
+      "js/pages/pizzas.js"
+    ],
+    "variants": [
+      {
+        "path": "/img/optimized/pizza-barbacoa-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 102988,
+        "quality": 90,
+        "lossless": false,
+        "sha256": "231045294346d8314730f6d3c3a4951790bed21cbeb217f24ab845499858d67f",
+        "psnr": 35.51
+      },
+      {
+        "path": "/img/optimized/pizza-barbacoa-736.webp",
+        "width": 736,
+        "height": 736,
+        "bytes": 140314,
+        "quality": 78,
+        "lossless": false,
+        "sha256": "bc5608f7979efbcd7455ed750b56aa5d1471a918655fd5b714d39ce5586278a2",
+        "psnr": 33.98
+      }
+    ]
+  },
+  "/img/pizza-carbonara-fingers.png": {
+    "source": "/img/pizza-carbonara-fingers.png",
+    "width": 1672,
+    "height": 941,
+    "format": "PNG",
+    "bytes": 2875838,
+    "sha256": "df8f3e4147713846b1746ef5a301202abe57a6daba4b103133b9ee2d252d9871",
+    "uses": [
+      "js/pages/store.js"
+    ],
+    "variants": [
+      {
+        "path": "/img/optimized/pizza-carbonara-fingers-480.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 64034,
+        "quality": 90,
+        "lossless": false,
+        "sha256": "8924b9a69c48adbb5dd165ea6ed3145f0d016d2b0118bab38aa7c9429d3b6e2f",
+        "psnr": 30.75
+      },
+      {
+        "path": "/img/optimized/pizza-carbonara-fingers-960.webp",
+        "width": 960,
+        "height": 540,
+        "bytes": 201294,
+        "quality": 90,
+        "lossless": false,
+        "sha256": "b5c9f43c0947bea602b1eff08e960c2dcebe43ed8c81d29e438354101a5d558c",
+        "psnr": 32.47
+      }
+    ]
+  },
+  "/img/pizza-carbonara.jpg": {
+    "source": "/img/pizza-carbonara.jpg",
+    "width": 736,
+    "height": 736,
+    "format": "JPEG",
+    "bytes": 77502,
+    "sha256": "26ef19c5cc210a437db65d28dc74d4da1cbe54b56f5bf7cca419531d73072864",
+    "uses": [
+      "js/pages/pizzas.js"
+    ],
+    "variants": [
+      {
+        "path": "/img/optimized/pizza-carbonara-736.webp",
+        "width": 736,
+        "height": 736,
+        "bytes": 68510,
+        "quality": 82,
+        "lossless": false,
+        "sha256": "4b1517692b795e6f64811453551b13df08a847c357f427b7cd65c19ac10f049e",
+        "psnr": 37.91
+      }
+    ]
+  },
+  "/img/pizza-hawaiana-patatas.png": {
+    "source": "/img/pizza-hawaiana-patatas.png",
+    "width": 1672,
+    "height": 941,
+    "format": "PNG",
+    "bytes": 2673103,
+    "sha256": "77194ef80dfc294aeb16fe5c37ba9f28f8dd05c97b04b64087b4ae5161030012",
+    "uses": [
+      "js/pages/store.js"
+    ],
+    "variants": [
+      {
+        "path": "/img/optimized/pizza-hawaiana-patatas-480.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 56374,
+        "quality": 90,
+        "lossless": false,
+        "sha256": "95a8169c5b7f9fa4514daea344b71ba230b0897504e441238ecd6f7796c734c0",
+        "psnr": 32.17
+      },
+      {
+        "path": "/img/optimized/pizza-hawaiana-patatas-960.webp",
+        "width": 960,
+        "height": 540,
+        "bytes": 180300,
+        "quality": 90,
+        "lossless": false,
+        "sha256": "0a329bab4caee893537d94d572bfcbfa57b06f9f9136544e1a531d8327464b9a",
+        "psnr": 34.17
+      }
+    ]
+  },
+  "/img/pizza-hawayana.jpg": {
+    "source": "/img/pizza-hawayana.jpg",
+    "width": 736,
+    "height": 736,
+    "format": "JPEG",
+    "bytes": 92253,
+    "sha256": "bcaee697e595b9e5f6cd45615633b3956d375f5b594b62d1fe5df779734da21c",
+    "uses": [
+      "js/pages/pizzas.js"
+    ],
+    "variants": [
+      {
+        "path": "/img/optimized/pizza-hawayana-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 72804,
+        "quality": 90,
+        "lossless": false,
+        "sha256": "ed10a03cbc7e82662e3f04830cf6ee5f7215464e66fb4b070d511c81091a311a",
+        "psnr": 37.94
+      },
+      {
+        "path": "/img/optimized/pizza-hawayana-736.webp",
+        "width": 736,
+        "height": 736,
+        "bytes": 80946,
+        "quality": 80,
+        "lossless": false,
+        "sha256": "48d80de1934244db687742bd0a04399e542c8cba534e44bf63f898674ee92082",
+        "psnr": 36.88
+      }
+    ]
+  },
+  "/img/pizza-margarita.jpg": {
+    "source": "/img/pizza-margarita.jpg",
+    "width": 736,
+    "height": 736,
+    "format": "JPEG",
+    "bytes": 97909,
+    "sha256": "dd851bcc05d94208e1a8996c052ce1d6d85c647aa64401713b8dd1f2fff7c70f",
+    "uses": [
+      "js/pages/pizzas.js"
+    ],
+    "variants": [
+      {
+        "path": "/img/optimized/pizza-margarita-736.webp",
+        "width": 736,
+        "height": 736,
+        "bytes": 84324,
+        "quality": 78,
+        "lossless": false,
+        "sha256": "9183d0292496ad8de2f839e586d4fa365cc350e9d78b0c0bcc9fbf4b26c7843c",
+        "psnr": 35.74
+      }
+    ]
+  },
+  "/img/pizza-peperoni-fingers.png": {
+    "source": "/img/pizza-peperoni-fingers.png",
+    "width": 1672,
+    "height": 941,
+    "format": "PNG",
+    "bytes": 2777200,
+    "sha256": "9f74f7ce8def511358bafdb2482dcff303b40a50deeb3ef0a237de2c0a810d0d",
+    "uses": [
+      "js/pages/store.js"
+    ],
+    "variants": [
+      {
+        "path": "/img/optimized/pizza-peperoni-fingers-480.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 62260,
+        "quality": 90,
+        "lossless": false,
+        "sha256": "42ebe993717702e95f0d9b5d38ae6fa86448bf7a483d8383fb19e571e460b18e",
+        "psnr": 29.79
+      },
+      {
+        "path": "/img/optimized/pizza-peperoni-fingers-960.webp",
+        "width": 960,
+        "height": 540,
+        "bytes": 190616,
+        "quality": 90,
+        "lossless": false,
+        "sha256": "5d62e63d5c3953d0a3c92d3f88b85a58f9724216ed6b116773d6139925a91e25",
+        "psnr": 31.67
+      }
+    ]
+  },
+  "/img/pizza-peperoni.jpg": {
+    "source": "/img/pizza-peperoni.jpg",
+    "width": 736,
+    "height": 736,
+    "format": "JPEG",
+    "bytes": 104165,
+    "sha256": "020ce518497e96e0503f277ad03508203d67669b08302b0b73c048f9dc103625",
+    "uses": [
+      "js/pages/pizzas.js"
+    ],
+    "variants": [
+      {
+        "path": "/img/optimized/pizza-peperoni-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 81214,
+        "quality": 90,
+        "lossless": false,
+        "sha256": "f92e3dd665d210538475acc41bba04400aa9f7061cabd70a7e6e2adb73b7d9a2",
+        "psnr": 36.01
+      },
+      {
+        "path": "/img/optimized/pizza-peperoni-736.webp",
+        "width": 736,
+        "height": 736,
+        "bytes": 94178,
+        "quality": 78,
+        "lossless": false,
+        "sha256": "d87f2950f14231c6435df3f91a7e258c34a1240ccf2d9060785a5f355efd17e4",
+        "psnr": 35.47
+      }
+    ]
+  }
+}
