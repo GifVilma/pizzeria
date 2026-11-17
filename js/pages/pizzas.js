@@ -7,7 +7,7 @@ export function renderPizzasPage() {
       nombreUpper: "La favorita de nuestros clientes",
       nombreLower: "Pizza Barbacoa (Insignia)",
       descripcion: "Una combinación irresistible de pollo, cerdo y carne jugosa bañada en salsa barbacoa, con abundante mozzarella fundida. ¡Perfecta para los amantes del sabor intenso!.<br>Precios: Pequeña $7.00 | Mediana $9.00 | Familiar $11.00 | Extra Familiar $14.00.",
-      imagen: "img/pizza-barbacoa.jpg",
+      imagen: "img/optimized/pizza-barbacoa-736.webp",
       alignTitle: "ml-auto",
       alignDesc: "mr-auto"
     },
@@ -15,7 +15,7 @@ export function renderPizzasPage() {
       nombreUpper: "Especialidad Tradicional",
       nombreLower: "Pizza Hawaiana",
       descripcion: "El delicioso contraste del jamón y la piña con salsa de tomate y mozzarella derretida. Un clásico para disfrutar en casa.<br>Precios: Pequeña $5.50 | Mediana $7.00 | Familiar $8.50 | Extra Familiar $11.50.",
-      imagen: "img/pizza-hawayana.jpg",
+      imagen: "img/optimized/pizza-hawayana-736.webp",
       alignTitle: "mr-auto",
       alignDesc: "ml-auto"
     },
@@ -23,7 +23,7 @@ export function renderPizzasPage() {
       nombreUpper: "Sabor Cremoso & Delicioso",
       nombreLower: "Pizza Carbonara",
       descripcion: "Cerdo fresco, suave crema carbonara y mozzarella fundida en una pizza cremosa y llena de sabor.<br>Precios: Pequeña $5.50 | Mediana $7.00 | Familiar $8.50 | Extra Familiar $11.50.",
-      imagen: "img/pizza-carbonara.jpg",  
+      imagen: "img/optimized/pizza-carbonara-736.webp",
       alignTitle: "ml-auto",
       alignDesc: "mr-auto"
     },
@@ -31,7 +31,7 @@ export function renderPizzasPage() {
       nombreUpper: "Sabor Clásico Italiano",
       nombreLower: "Pizza Margarita",
       descripcion: "La sencillez que enamora: salsa de tomate, albahaca fresca y mozzarella. Una pizza clásica que siempre apetece.<br>Precios: Pequeña $5.50 | Mediana $6.50 | Familiar $8.00 | Extra Familiar $10.50.",
-      imagen: "img/pizza-margarita.jpg",
+      imagen: "img/optimized/pizza-margarita-736.webp",
       alignTitle: "mr-auto",
       alignDesc: "ml-auto"
     },
@@ -39,7 +39,7 @@ export function renderPizzasPage() {
       nombreUpper: "Especialidad Crocante",
       nombreLower: "Pizza Pepperoni",
       descripcion: "Pepperoni lleno de sabor y mozzarella fundida sobre una deliciosa base de pizza. ¡Un favorito para compartir!<br>Precios: Pequeña $5.50 | Mediana $7.00 | Familiar $8.50 | Extra Familiar $11.50.",
-      imagen: "img/pizza-peperoni.jpg",
+      imagen: "img/optimized/pizza-peperoni-736.webp",
       alignTitle: "ml-auto",
       alignDesc: "mr-auto"
     }

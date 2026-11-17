@@ -63,13 +63,12 @@ await test('Carta oficial y condiciones confirmadas por el negocio', async t => 
     assert.match(guide, /porción de arroz por \$1\.00/);
     assert.ok(store.indexOf('</section>', store.indexOf('id="complementos"')) < store.indexOf('id="arroz"'));
   });
-  await t.test('Fingers usa la fotografía del plato blanco y conserva las anteriores', async () => {
-    assert.match(complements, /src="img\/fingers-plato-blanco-1200\.webp"/);
+  await t.test('Fingers conserva la fotografía aprobada y sus WebP existentes', async () => {
+    assert.match(complements, /src="img\/optimized\/fingers\.webp"/);
     assert.match(complements, /alt="Fingers de pollo con patatas, presentados en un plato blanco"/);
     assert.doesNotMatch(complements, /src="img\/fingers\.jpeg"/);
     assert.doesNotMatch(complements, /src="img\/finger-pollo\.jpg"/);
-    await access(join(projectRoot, 'img/fingers.jpeg'));
-    await access(join(projectRoot, 'img/finger-pollo.jpg'));
+    await access(join(projectRoot, 'img/optimized/fingers-960.webp'));
     for (const path of ['img/optimized/fingers-480.webp', 'img/optimized/fingers-960.webp']) await access(join(projectRoot, path));
   });
   await t.test('Los cinco combos conservan precio, composición, cantidades y fotografías', () => {
@@ -77,7 +76,7 @@ await test('Carta oficial y condiciones confirmadas por el negocio', async t => 
     assert.deepEqual(combos.match(/\$\d+\.\d{2}/g), ['$9.00', '$9.00', '$12.50', '$9.00', '$17.00']);
     assert.equal([...combos.matchAll(/<h3\b/g)].length, 5);
     assert.equal([...combos.matchAll(/\(6 ud\.\)/g)].length, 4);
-    assert.deepEqual([...combos.matchAll(/src="([^"]+)"/g)].map(m => m[1]), ['img/pizza-peperoni-fingers.png', 'img/pizza-hawaiana-patatas.png', 'img/combo-bar-ali.jpg', 'img/pizza-carbonara-fingers.png', 'img/combo-familiar.png']);
+    assert.deepEqual([...combos.matchAll(/src="([^"]+)"/g)].map(m => m[1]), ['img/optimized/pizza-peperoni-fingers-960.webp', 'img/optimized/pizza-hawaiana-patatas-960.webp', 'img/optimized/combo-bar-ali-736.webp', 'img/optimized/pizza-carbonara-fingers-960.webp', 'img/optimized/combo-familiar-960.webp']);
     assert.match(combos, /Barbacoa, Hawaiana, Carbonara, Margarita o Pepperoni/);
     assert.doesNotMatch(combos, /ensalada|id="arroz"/);
   });

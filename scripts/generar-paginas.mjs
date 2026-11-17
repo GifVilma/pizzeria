@@ -54,11 +54,11 @@ const pageDefinitions = [
 ];
 
 const socialImages = {
-  home: { path: '/img/bpizza.jpeg', alt: 'Pizza artesanal de La Buona Pizza Alausí' },
-  pizzas: { path: '/img/pizza-barbacoa.jpg', alt: 'Pizza Barbacoa de la carta de La Buona Pizza Alausí' },
-  combos: { path: '/img/combo-familiar.png', alt: 'Combo La Buona con pizza familiar, alitas BBQ y Papas Locas' },
-  resenas: { path: '/img/bpizza.jpeg', alt: 'Pizza artesanal de La Buona Pizza Alausí' },
-  blog: { path: '/img/masa-madre.jpg', alt: 'Imagen de la publicación sobre masa artesanal de La Buona Pizza Alausí' }
+  home: { path: '/img/optimized/bpizza-800.webp', alt: 'Pizza artesanal de La Buona Pizza Alausí' },
+  pizzas: { path: '/img/optimized/pizza-barbacoa-736.webp', alt: 'Pizza Barbacoa de la carta de La Buona Pizza Alausí' },
+  combos: { path: '/img/optimized/combo-familiar-960.webp', alt: 'Combo La Buona con pizza familiar, alitas BBQ y Papas Locas' },
+  resenas: { path: '/img/optimized/bpizza-800.webp', alt: 'Pizza artesanal de La Buona Pizza Alausí' },
+  blog: { path: '/img/optimized/masa-madre-736.webp', alt: 'Imagen de la publicación sobre masa artesanal de La Buona Pizza Alausí' }
 };
 
 export async function renderSitePages({ preview = false } = {}) {
@@ -69,12 +69,12 @@ export async function renderSitePages({ preview = false } = {}) {
     const url = `${siteOrigin}${page.path}`;
     const socialImage = page.socialImage || socialImages[page.key] || socialImages.home;
     const values = {
-      ICON: imageManifest['/img/favicon-logo.png'].variants[0]?.path || '/img/favicon-logo.png',
-      ICON_TYPE: imageManifest['/img/favicon-logo.png'].variants.length ? 'image/webp' : 'image/png',
+      ICON: imageManifest['/img/optimized/favicon-logo-64.webp'].source,
+      ICON_TYPE: 'image/webp',
       OG_TYPE: page.type || 'website',
       TITLE: escapeHtml(page.title), DESCRIPTION: escapeHtml(page.description), URL: url,
       IMAGE: `${siteOrigin}${socialImage.path}`, IMAGE_ALT: escapeHtml(socialImage.alt),
-      IMAGE_WIDTH: String(imageManifest[socialImage.path].width), IMAGE_HEIGHT: String(imageManifest[socialImage.path].height),
+      IMAGE_WIDTH: String(imageManifest[socialImage.path].sourceWidth), IMAGE_HEIGHT: String(imageManifest[socialImage.path].sourceHeight),
       JSON_LD: preview || page.key === '404' ? '' : `<script type="application/ld+json">${structuredData({ page, origin: siteOrigin, image: `${siteOrigin}${socialImage.path}`, article: page.article })}</script>`,
       CANONICAL: preview || page.key === '404' ? '' : `<link rel="canonical" href="${url}">`,
       ROBOTS: preview ? '<meta name="robots" content="noindex, nofollow">' : page.key === '404' ? '<meta name="robots" content="noindex, follow">' : '',

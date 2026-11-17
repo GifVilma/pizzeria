@@ -1,5 +1,5 @@
 // Transformación de presentación durante la generación; las fuentes de la carta
-// y los originales siguen siendo la referencia. No se ejecuta en el navegador.
+// siguen siendo la referencia. Solo usa WebP existentes; no se ejecuta en el navegador.
 import manifest from '../img/optimized/manifest.json' with { type: 'json' };
 export { manifest as imageManifest };
 
@@ -8,8 +8,8 @@ function sizesFor(tag, html, entry) {
     return `(min-width: 992px) ${Math.min(entry.width, 800)}px, (min-width: 768px) 690px, (min-width: 576px) 510px, calc(100vw - 30px)`;
   }
   if (html.includes('id="complementos"')) {
-    if (entry.source === '/img/combo-familiar.png') return '(min-width: 768px) 462px, (min-width: 576px) 444px, calc(100vw - 144px)';
-    if (['/img/alitas.png', '/img/papas-locas.jpeg', '/img/fingers-plato-blanco-1200.webp', '/img/papas_locas_fingers.png'].includes(entry.source)) {
+    if (entry.source === '/img/optimized/combo-familiar-960.webp') return '(min-width: 768px) 462px, (min-width: 576px) 444px, calc(100vw - 144px)';
+    if (['/img/optimized/alitas-730.webp', '/img/optimized/papas-locas.webp', '/img/optimized/fingers.webp', '/img/optimized/papas-locas-fingers.webp'].includes(entry.source)) {
       return '(min-width: 1200px) 218px, (min-width: 992px) 220px, (min-width: 768px) 170px, (min-width: 576px) 414px, calc(100vw - 126px)';
     }
     return '(min-width: 1200px) 341px, (min-width: 992px) 346px, (min-width: 768px) 274px, (min-width: 576px) 398px, calc(100vw - 142px)';
@@ -35,6 +35,7 @@ export function optimizeHtmlImages(html) {
       const maxWidth = Number(maxHeight[1]) * entry.width / entry.height;
       tag = tag.replace(/style="([^"]*)"/, (_, style) => `style="${style} max-width: min(100%, ${maxWidth.toFixed(6)}px);"`);
     }
+    // Dimensiones de presentación conservadas; el WebP real puede ser más pequeño.
     const dimensions = ` width="${entry.width}" height="${entry.height}"`;
     const loading = ` loading="${primary ? 'eager' : 'lazy'}" decoding="async"${primary ? ' fetchpriority="high"' : ''}`;
     const image = tag.replace(/>$/, `${dimensions}${loading} data-original-src="${src}">`);

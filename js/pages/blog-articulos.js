@@ -10,7 +10,7 @@ export const blogArticles = [
     description: 'Elige tu pizza a domicilio en Alausí: compara sabores, tamaños, precios, combos y complementos de La Buona Pizza y prepara tu pedido por WhatsApp.',
     category: 'Guía de pedidos',
     summary: 'Compara las cinco pizzas de nuestra carta, sus tamaños, combos y complementos, y prepara un pedido claro por WhatsApp.',
-    image: '/img/bpizza.jpeg',
+    image: '/img/optimized/bpizza-800.webp',
     imageAlt: 'Pizza artesanal de La Buona Pizza Alausí',
     content: `
       <p>Elegir una pizza resulta más fácil cuando puedes comparar ingredientes, tamaños y acompañamientos. Quizá ya tengas un sabor favorito o quieras probar algo diferente. En ambos casos, revisar la carta antes de escribir ayuda a preparar un pedido claro.</p>
@@ -84,7 +84,7 @@ export const blogArticles = [
     description: 'Descubre qué tener en cuenta al elegir una pizza artesanal en Alausí y qué consultar sobre la masa y los ingredientes antes de hacer tu pedido.',
     category: 'Recetas y tradición',
     summary: 'La masa también cuenta al elegir una pizza. Te proponemos preguntas útiles para conocer mejor tu pedido, sin atribuir procesos de elaboración no confirmados.',
-    image: '/img/masa-madre.jpg',
+    image: '/img/optimized/masa-madre-736.webp',
     imageAlt: 'Imagen de la publicación sobre masa artesanal de La Buona Pizza Alausí',
     content: `
       <p>Cuando pensamos en una pizza, solemos empezar por el queso, la salsa o nuestros ingredientes favoritos. La masa también forma parte de esa elección. En La Buona Pizza Alausí presentamos nuestras pizzas como artesanales y queremos ayudarte a consultar la información que necesitas antes de pedir.</p>

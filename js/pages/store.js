@@ -33,7 +33,7 @@ export function renderStorePage() {
                       </div>
                       <p class="mb-3">1 Pizza Mediana Pepperoni + Fingers de pollo (6 ud.)</p>
                     </div>
-                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/pizza-peperoni-fingers.png" alt="Pizza Pepperoni y fingers de pollo">
+                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/optimized/pizza-peperoni-fingers-960.webp" alt="Pizza Pepperoni y fingers de pollo">
                   </div>
                 </div>
 
@@ -47,7 +47,7 @@ export function renderStorePage() {
                       </div>
                       <p class="mb-3">1 Pizza Mediana Hawaiana + Papas Locas</p>
                     </div>
-                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/pizza-hawaiana-patatas.png" alt="Pizza hawaiana y patatas locas">
+                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/optimized/pizza-hawaiana-patatas-960.webp" alt="Pizza hawaiana y patatas locas">
                   </div>
                 </div>
 
@@ -61,7 +61,7 @@ export function renderStorePage() {
                       </div>
                       <p class="mb-3">1 Pizza Mediana Barbacoa + Alitas BBQ (6 ud.)</p>
                     </div>
-                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/combo-bar-ali.jpg" alt="Pizza barbacoa con alitas BBQ">
+                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/optimized/combo-bar-ali-736.webp" alt="Pizza barbacoa con alitas BBQ">
                   </div>
                 </div>
 
@@ -75,7 +75,7 @@ export function renderStorePage() {
                       </div>
                       <p class="mb-3">1 Pizza Mediana Carbonara + Fingers de pollo (6 ud.)</p>
                     </div>
-                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/pizza-carbonara-fingers.png" alt="Pizza carbonara y fingers de pollo">
+                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/optimized/pizza-carbonara-fingers-960.webp" alt="Pizza carbonara y fingers de pollo">
                   </div>
                 </div>
 
@@ -87,7 +87,7 @@ export function renderStorePage() {
                       1 Pizza Familiar a elección (Barbacoa, Hawaiana, Carbonara, Margarita o Pepperoni) + Alitas BBQ (6 ud.) + Papas Locas
                     </p>
                     <span class="h4 font-weight-bold text-danger d-block mb-3">$17.00</span>
-                    <img class="img-fluid rounded shadow-sm mx-auto d-block" style="max-height: 260px; object-fit: cover;" src="img/combo-familiar.png" alt="Combo familiar La Buona con pizza, alitas BBQ y Papas Locas">
+                    <img class="img-fluid rounded shadow-sm mx-auto d-block" style="max-height: 260px; object-fit: cover;" src="img/optimized/combo-familiar-960.webp" alt="Combo familiar La Buona con pizza, alitas BBQ y Papas Locas">
                   </div>
                 </div>
 
@@ -103,7 +103,7 @@ export function renderStorePage() {
                     <h3 class="h5 font-weight-bold mb-1">Alitas BBQ</h3>
                     <p class="small text-muted mb-2">Porción de 6 unidades</p>
                     <span class="font-weight-bold text-primary">$5.00</span>
-                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/alitas.png" alt="Porción de alitas BBQ">
+                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/optimized/alitas-730.webp" alt="Porción de alitas BBQ">
                   </div>
                 </div>
                 <div class="col-md-4 mb-3">
@@ -111,7 +111,7 @@ export function renderStorePage() {
                     <h3 class="h5 font-weight-bold mb-1">Papas Locas</h3>
                     <p class="small text-muted mb-2">Pollo, carne y cerdo cubiertos con salsa especial La Buona y mayonesa al gusto.</p>
                     <span class="font-weight-bold text-primary">$4.00</span>
-                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/papas-locas.jpeg" alt="Complemento del menú: papas locas">
+                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/optimized/papas-locas.webp" alt="Complemento del menú: papas locas">
                   </div>
                 </div>
                 <div class="col-md-4 mb-3">
@@ -119,7 +119,7 @@ export function renderStorePage() {
                     <h3 class="h5 font-weight-bold mb-1">Fingers de pollo</h3>
                     <p class="small text-muted mb-2">Porción de 6 unidades</p>
                     <span class="font-weight-bold text-primary">$4.00</span>
-                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/fingers-plato-blanco-1200.webp" alt="Fingers de pollo con patatas, presentados en un plato blanco">
+                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/optimized/fingers.webp" alt="Fingers de pollo con patatas, presentados en un plato blanco">
                   </div>
                 </div>
                 <div class="col-md-4 mb-3">
@@ -127,7 +127,7 @@ export function renderStorePage() {
                     <h3 class="h5 font-weight-bold mb-1">Combinado La Buona</h3>
                     <p class="small text-muted mb-2">Papas Locas + Fingers de pollo</p>
                     <span class="font-weight-bold text-primary">$6.50</span>
-                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/papas_locas_fingers.png" alt="Combinado La Buona">
+                    <img class="img-fluid rounded mt-2 shadow-sm" src="img/optimized/papas-locas-fingers.webp" alt="Combinado La Buona">
                   </div>
                 </div>
               </div>

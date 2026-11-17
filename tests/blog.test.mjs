@@ -62,13 +62,13 @@ await test('Artículos del blog y correspondencia con la carta actual', async t 
     const fingers = Number(prices.get('fingers de pollo').slice(1));
     assert.ok(guide.content.includes(`subtotal de estos productos es ${dollars(medium + fingers)}`));
   });
-  await t.test('Carnívora retirada de fuentes, listado, sitemap y HTML generado; imagen conservada', async () => {
+  await t.test('Carnívora retirada sin dependencia de su imagen original', async () => {
     assert.equal(blogArticles.length, 2);
     assert.ok(!blogArticles.some(article => article.slug === 'pizza-carnivora-alausi'));
     assert.doesNotMatch(renderBlogPage(), /Carnívora|pizza-carnivora-alausi/);
     assert.doesNotMatch(renderSitemap(), /pizza-carnivora-alausi/);
     await assert.rejects(access(join(projectRoot, 'blog/pizza-carnivora-alausi/index.html')), { code: 'ENOENT' });
-    await access(join(projectRoot, 'img/pizza-carnivora.png'));
+    assert.doesNotMatch(renderBlogPage(), /pizza-carnivora\.png/);
   });
   await t.test('Masa sin afirmaciones técnicas o digestivas no confirmadas', () => {
     const article = blogArticles.find(a => a.slug === 'masa-artesanal');
