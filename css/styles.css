@@ -1,6 +1,22 @@
 /* ==========================================================================
-   Estilos CSS Limpios (Business Casual - La Buona Pizza Alausí)
+   Identidad italiana — La Buona Pizza Alausí
    ========================================================================== */
+
+/* Sistema de marca compartido por todas las páginas. */
+:root {
+  --brand-red: #b71c1c;
+  --footer-bg: #14281d;
+  --brand-basil: #176b45;
+  --brand-gold-warm: #ffb74d;
+  --brand-gold: #e6a756;
+  --white: #ffffff;
+  --ink: #212529;
+  --surface: rgba(255, 255, 255, 0.96);
+  --surface-soft: rgba(255, 255, 255, 0.85);
+  --brand-line: rgba(183, 28, 28, 0.18);
+  --gold-line: rgba(230, 167, 86, 0.45);
+  --panel-shadow: 0 12px 32px rgba(33, 37, 41, 0.12);
+}
 
 body {
   --logo-fondo-ancho: 22vw;
@@ -9,12 +25,12 @@ body {
   --logo-fondo-abajo: 104px;
   isolation: isolate;
   font-family: 'Lora', serif;
-  background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/optimized/bg-1520.webp");
-  background-image: linear-gradient(rgba(47, 23, 15, 0.40), rgba(47, 23, 15, 0.65)), url("../img/optimized/bg-1520.webp");
+  /* Velo neutro: conserva los tonos naturales de la fotografía original. */
+  background: linear-gradient(rgba(20,20,20,0.35), rgba(20,20,20,0.50)), url("../img/optimized/bg-1520.webp");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  color: #212529;
+  color: var(--ink);
 }
 
 /* Logotipo del fondo, sobre la fotografía y por debajo del contenido. */
@@ -74,20 +90,21 @@ p {
   display: block;
   font-size: 2rem;
   font-weight: 800;
-  color: #e6a756;
+  color: var(--brand-gold);
 }
 
 .site-heading .site-heading-lower {
   font-size: 4.5rem;
-  font-weight: 100;
-  line-height: 4rem;
-  color: #ffffff;
+  font-weight: 400;
+  line-height: 1.1;
+  text-shadow: 0 2px 12px rgba(33, 37, 41, 0.65);
+  color: var(--white);
 }
 
 /* Secciones y Contenedores */
 .page-section {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
 }
 
 .section-heading {
@@ -99,13 +116,14 @@ p {
   font-size: 1rem;
   font-weight: 800;
   padding-bottom: .5rem;
-  color: #e6a756;
+  color: var(--brand-gold);
 }
 
 .section-heading .section-heading-lower {
   display: block;
   font-size: 3rem;
-  font-weight: 200;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 .section-heading .section-heading-under {
@@ -125,9 +143,10 @@ p {
 
 /* Tarjetas y Bloques Blancos Traslúcidos */
 .bg-faded {
-  background-color: rgba(255, 255, 255, 0.85);
-  color: #212529;
+  background-color: var(--surface-soft);
+  color: var(--ink);
   border-radius: 0.5rem;
+  box-shadow: var(--panel-shadow);
 }
 
 /* Apilado del contenido de presentación de portada. */
@@ -141,26 +160,40 @@ body[data-page="home"] .intro-text > * {
   z-index: 1;
 }
 
-/* Barra de Navegación (Líneas naranjas eliminadas) */
+/* Navegación roja, con una línea italiana discreta como firma de marca. */
 #mainNav {
-  background-color: rgba(47, 23, 15, 0.9);
+  background-color: var(--brand-red);
   font-family: 'Raleway', sans-serif;
-  border: none !important; /* Asegura eliminar cualquier borde previo */
+  border: none !important;
+  box-shadow: inset 0 -2px var(--brand-basil);
 }
 
 #mainNav .navbar-brand {
-  color: #e6a756;
+  color: var(--brand-gold);
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--white);
+  background: transparent;
+  box-shadow: none;
   font-weight: 800;
   text-transform: uppercase;
 }
 
 #mainNav .navbar-nav .nav-item.active .nav-link,
-#mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #e6a756;
+#mainNav .navbar-nav .nav-item .nav-link:hover,
+#mainNav .navbar-nav .nav-item .nav-link:focus,
+#mainNav .navbar-nav .nav-item .nav-link:active {
+  color: #f3d4b6;
+}
+
+/* Teclado: subrayado blanco visible, sin fondos ni recuadros. */
+#mainNav .navbar-nav .nav-item .nav-link:focus-visible {
+  outline: none;
+  text-decoration: underline;
+  text-decoration-color: var(--white);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.3em;
 }
 
 @media (min-width: 992px) {
@@ -171,25 +204,37 @@ body[data-page="home"] .intro-text > * {
 
 /* Botones y Elementos Destacados */
 .text-primary {
-  color: #e6a756 !important;
+  color: var(--brand-gold) !important;
 }
 
 .bg-primary {
-  background-color: #e6a756 !important;
+  background-color: var(--brand-red) !important;
+  color: var(--white);
 }
 
-/* Texto sobre superficies claras; los iconos decorativos conservan el naranja. */
+/* El texto pequeño conserva contraste incluso sobre paneles blancos al 85 %. */
 .bg-faded .text-primary:not(i):not(svg),
 .cta-inner .text-primary:not(i):not(svg),
 .bg-faded .section-heading-upper,
 .cta-inner .section-heading-upper {
-  color: #2f170f !important;
+  color: var(--ink) !important;
+}
+
+/* Títulos en verde bosque; iconos secundarios en verde albahaca. */
+.bg-faded h3.text-primary:not(i):not(svg),
+.cta-inner h3.text-primary:not(i):not(svg) {
+  color: var(--footer-bg) !important;
+}
+
+.bg-faded i.text-primary,
+.cta-inner i.text-primary {
+  color: var(--brand-basil) !important;
 }
 
 .btn-primary {
-  background-color: #e6a756;
-  border-color: #e6a756;
-  color: #2f170f;
+  background-color: var(--brand-red);
+  border-color: var(--brand-red);
+  color: var(--white);
   box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);
 }
 
@@ -199,16 +244,25 @@ body[data-page="home"] .intro-text > * {
 .btn-primary:active,
 .btn-primary:not(:disabled):not(.disabled):active,
 .btn-primary:not(:disabled):not(.disabled).active {
-  background-color: #df902a;
-  border-color: #df902a;
-  color: #2f170f;
+  background-color: var(--brand-red);
+  border-color: var(--brand-red);
+  color: var(--white);
+  box-shadow: inset 0 -2px var(--brand-gold);
+}
+
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px var(--white);
 }
 
 .btn-primary:disabled,
 .btn-primary.disabled {
-  background-color: #e6a756;
-  border-color: #e6a756;
-  color: #2f170f;
+  background-color: var(--brand-red);
+  border-color: var(--brand-red);
+  color: var(--white);
 }
 
 .btn-xl {
@@ -222,17 +276,19 @@ body[data-page="home"] .intro-text > * {
 
 /* Secciones Destacadas (Call To Action / CTA) */
 .cta {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  background-color: rgba(230, 167, 86, 0.9);
+  padding-block: clamp(0.75rem, 2vw, 1.5rem);
+  background-color: transparent;
 }
 
 .cta .cta-inner {
   position: relative;
   padding: 3rem;
   margin: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: var(--surface);
+  color: var(--ink);
+  border-top: 3px solid var(--brand-red);
   border-radius: 0.5rem;
+  box-shadow: var(--panel-shadow);
 }
 
 .cta .cta-inner:before {
@@ -244,7 +300,23 @@ body[data-page="home"] .intro-text > * {
   bottom: -0.5rem;
   left: -0.5rem;
   right: -0.5rem;
-  border: 0.25rem solid rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--gold-line);
+}
+
+/* Contenedores principales: rojo únicamente arriba y a la derecha.
+   El marco dorado exterior se mantiene independiente en ::before. */
+body[data-page="combos"] .cta-inner,
+body[data-page="blog"] .cta-inner,
+body[data-page="resenas"] .cta-inner {
+  border-top: 2px solid var(--brand-red);
+  border-right: 2px solid var(--brand-red);
+}
+
+/* Un único marco dorado exterior, con los cuatro lados e inset originales. */
+body[data-page="combos"] .cta-inner::before,
+body[data-page="blog"] .cta-inner::before,
+body[data-page="resenas"] .cta-inner::before {
+  border: 2px solid var(--brand-gold);
 }
 
 /* El marco de los artículos es decorativo: no debe bloquear enlaces ni selección. */
@@ -252,14 +324,16 @@ body[data-page="home"] .intro-text > * {
   pointer-events: none;
 }
 
-/* Pie de Página (Línea naranja eliminada) */
+/* Pie verde bosque: una base tranquila para los accesos sociales. */
 .footer {
-  background-color: rgba(47, 23, 15, 0.9);
+  background-color: var(--footer-bg);
+  color: var(--white);
   border: none !important;
+  box-shadow: inset 0 1px var(--gold-line);
 }
 
 .footer .small {
-  color: #fff;
+  color: var(--white);
 }
 
 @media (max-width: 575.98px) {
@@ -269,13 +343,67 @@ body[data-page="home"] .intro-text > * {
   }
 }
 
-a.link {
-  color: #df902a;
+.footer a.link {
+  color: var(--white);
 }
 
-a.link:hover {
+.footer a.link:hover {
   text-decoration: none;
-  color: #e6a756 !important;
+  color: var(--brand-gold) !important;
+}
+
+/* Enlaces de lectura subrayados; el tono oscuro soporta la transparencia. */
+.section-content a,
+.blog-back-link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--brand-red);
+  text-underline-offset: 0.15em;
+}
+
+.section-content a:hover,
+.blog-back-link:hover {
+  color: var(--ink);
+  text-decoration-thickness: 2px;
+}
+
+.badge-warning {
+  background-color: var(--white);
+  color: var(--brand-red);
+  border: 1px solid var(--brand-gold-warm);
+}
+
+.border-warning {
+  border-color: var(--brand-gold) !important;
+}
+
+.text-danger {
+  color: var(--brand-red) !important;
+}
+
+.alert-success {
+  color: var(--brand-basil);
+  background-color: var(--white);
+  border-color: var(--brand-basil);
+}
+
+/* El gris de Bootstrap resulta demasiado claro en paneles translúcidos. */
+.bg-faded .text-muted,
+.cta-inner .text-muted,
+.text-dark {
+  color: var(--ink) !important;
+}
+
+.form-control:focus {
+  border-color: var(--brand-red);
+  box-shadow: 0 0 0 0.2rem rgba(183, 28, 28, 0.25);
+}
+
+main a:focus-visible,
+#mainNav a:focus-visible,
+.footer a:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 3px;
 }
 
 .section-content {
@@ -406,7 +534,7 @@ a.link:hover {
   display: contents;
 }
 
-/* Control independiente: no altera WhatsApp ni los botones naranjas. */
+/* Control independiente de WhatsApp. */
 .back-to-top {
   position: fixed;
   left: 30px;
@@ -417,24 +545,42 @@ a.link:hover {
   padding: 0;
   border: 0;
   border-radius: 50%;
-  background-color: #2f170f;
-  color: #fff;
+  background-color: var(--brand-red);
+  color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   touch-action: manipulation;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .back-to-top[hidden] {
   display: none;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.35);
+  }
+}
+
 .back-to-top:focus-visible {
-  outline: 3px solid #e6a756;
+  outline: 3px solid var(--brand-gold);
   outline-offset: 3px;
   box-shadow: 0 0 0 3px #fff, 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top {
+    transition: none;
+  }
+
+  .back-to-top:hover {
+    transform: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -444,4 +590,109 @@ a.link:hover {
     width: 54px;
     height: 54px;
   }
+}
+
+
+/* Jerarquía común: títulos verde bosque y contenido oscuro sobre claro. */
+.bg-faded .section-heading-lower,
+.cta-inner .section-heading-lower,
+.blog-article .section-content h2,
+body[data-page="combos"] h3.text-dark {
+  color: var(--footer-bg) !important;
+}
+
+.bg-faded .section-heading-upper,
+.cta-inner .section-heading-upper {
+  letter-spacing: 0.08em;
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 2px;
+  margin: 1rem auto 0;
+  background: linear-gradient(to right, var(--brand-red) 0 50%, var(--footer-bg) 50% 100%);
+}
+
+/* Portada: la sección exterior hereda la transparencia de .cta;
+   la fotografía conserva el mismo filtro neutro que el resto de la página. */
+body[data-page="home"] .cta-inner {
+  background-color: var(--surface-soft);
+  border-top-color: var(--brand-red);
+  padding-block: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+/* Portada: retirar solo el marco dorado exterior del panel «PARA TI».
+   El pseudo-elemento es absoluto, por lo que no cambia el espacio ocupado. */
+body[data-page="home"] .cta-inner::before {
+  border: 0;
+}
+
+/* Formularios y lectura: superficies estables, sin velos de color anidados. */
+.cta-inner .bg-faded {
+  background-color: var(--white);
+  box-shadow: none;
+}
+
+body[data-page="resenas"] #resenas-form {
+  min-width: 0;
+}
+
+body[data-page="resenas"] #resenas-container .bg-faded {
+  border-inline-start: 2px solid var(--brand-basil);
+}
+
+.form-control {
+  color: var(--ink);
+  background-color: var(--white);
+  border-color: rgba(33, 37, 41, 0.4);
+}
+
+.form-control::placeholder {
+  color: #595959;
+  opacity: 1;
+}
+
+/* Los mensajes informativos conservan su función sin introducir azul de marca. */
+.alert-info {
+  color: var(--ink);
+  background-color: var(--white);
+  border-color: var(--brand-line);
+  border-inline-start: 3px solid var(--brand-basil);
+}
+
+/* Lectura secundaria: acción de contorno para distinguirla de pedir o llamar. */
+body[data-page="blog"] article .btn-primary {
+  background-color: transparent;
+  color: var(--brand-red);
+  border-color: var(--brand-red);
+  box-shadow: none;
+}
+
+body[data-page="blog"] article .btn-primary:hover,
+body[data-page="blog"] article .btn-primary:active {
+  background-color: var(--brand-red);
+  color: var(--white);
+}
+
+body[data-page="blog"] article .btn-primary:focus {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+@media (max-width: 575.98px) {
+  .cta .cta-inner {
+    padding: 1.5rem;
+  }
+
+  .section-heading .section-heading-lower {
+    line-height: 1.25;
+  }
+}
+
+/* Relieve discreto solo en las tarjetas individuales de combos y complementos.
+   !important sustituye la sombra .shadow-sm de las tarjetas que ya la usan. */
+body[data-page="combos"] .cta-inner .row > [class*="col-"] > .bg-faded {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12) !important;
 }
